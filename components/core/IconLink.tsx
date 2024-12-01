@@ -9,9 +9,9 @@ type LinkType = {
 
 function IconLink({ label, href }: LinkType) {
     let link = "";
-    if (label === "Youtube") {
+    if (label.includes("Youtube")) {
         link = "https://www.youtube.com/@pedro_furquim";
-    } else if (label === "Linkedin") {
+    } else if (label.includes("Linkedin")) {
         link = "https://www.linkedin.com/in/pedro-furquim/";
     }
     return (
