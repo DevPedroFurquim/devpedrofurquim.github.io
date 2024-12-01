@@ -7,8 +7,7 @@ function Footer() {
     <footer className='py-12 flex items-center justify-between' >
       <Title title="Contact" />
       <div className="flex space-x-4">
-        <IconLink label="Twitter" />
-        <IconLink label="Dribbble" />
+        <IconLink label="Youtube" />
         <IconLink label="Linkedin" />
       </div>
     </footer >

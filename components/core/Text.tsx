@@ -6,7 +6,7 @@ type TextType = {
 
 function Text({ text }: TextType) {
     return (
-        <p className='text-base font-normal text-gray-400 dark:text-gray-300 leading-6 mb-4'>{ text }</p>
+        <p className='text-base font-normal text-gray-600 dark:text-gray-300 leading-6 mb-4'>{ text }</p>
     )
 }
 

@@ -2,13 +2,13 @@ import React from 'react'
 
 
 type ButtonType = {
-    lable: string
+    label: string
 }
 
-function Button({ lable }: ButtonType) {
+function Button({ label }: ButtonType) {
     return (
-        <button className='text-lg font-semibold'>
-            { lable }
+        <button className='mt-4 text-lg font-semibold opacity-60 hover:opacity-100 hover:translate-x-1 transition duration-300'>
+            { label }
         </button>
     )
 }
