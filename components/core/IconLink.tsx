@@ -13,6 +13,8 @@ function IconLink({ label, href }: LinkType) {
         link = "https://www.youtube.com/@pedro_furquim";
     } else if (label.includes("Linkedin")) {
         link = "https://www.linkedin.com/in/pedro-furquim/";
+    } else if (label.includes("Github")) {
+        link = "https://github.com/devpedrofurquim"
     }
     return (
         <Link href={link} >

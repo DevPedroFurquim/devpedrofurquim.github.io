@@ -65,7 +65,7 @@ const bio = {
   title: "I’m Pedro",
   text: `I’m a 25-year-old Computer Engineering student and a passionate mobile developer specializing in React Native and Expo. 
   When I’m not busy building apps, I’m working on my dream of creating indie games.`,
-  label: 'Find my on Linkedin'
+  label: 'Find my on Github'
 }
 
 

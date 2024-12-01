@@ -9,6 +9,7 @@ function Footer() {
       <div className="flex space-x-4">
         <IconLink label="Youtube" />
         <IconLink label="Linkedin" />
+        <IconLink label="Github" />
       </div>
     </footer >
   );
