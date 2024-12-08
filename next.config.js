@@ -2,7 +2,10 @@
 module.exports = {
   reactStrictMode: true,
   i18n: {
-    locales: ["en", "pt-br"],
-    defaultLocale: "en",
+    output: 'export', // This is used for static export
+    distDir: 'dist',
+    reactStrictMode: true,
+    locales: ['en', 'pt-br'],
+    defaultLocale: 'en',
   },
-}
+};
