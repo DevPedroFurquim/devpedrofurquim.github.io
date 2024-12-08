@@ -1,11 +1,15 @@
 {
+  "name": "pedro-furquim-homepage",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -H 0.0.0.0",
     "build": "next build",
-    "start": "next start"
+    "prettier": "prettier -write .",
+    "lint": "next lint"
   },
   "dependencies": {
+    "author": "Pedro Furquim<pedrofurquim.dev@gmail.com>",
+    "description": "Pedro Furquim Homepage Website",
     "next": "latest",
     "next-themes": "^0.2.0",
     "react": "18.1.0",
