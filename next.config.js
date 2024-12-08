@@ -1,9 +1,7 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
   reactStrictMode: true,
-  output: 'export', // This is used for static export
-  distDir: 'out',
-  reactStrictMode: true,
+  distDir: 'out', // Output directory for the build
   i18n: {
     locales: ['en', 'pt-br'],
     defaultLocale: 'en',
