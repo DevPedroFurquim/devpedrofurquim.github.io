@@ -8,14 +8,17 @@ type IHProps = {
     style?: string;
     text:string;
     label: string;
+    url?: string;
+    bioStack: string
 }
 
-export default function HeadignWithText({title, style, text, label} : IHProps) {
+export default function HeadignWithText({title, style, text, label, url, bioStack} : IHProps) {
   return (
     <div>
       <Title title={title}/>
       <Text text={text}/>
-      <IconLink label={label}/>
+      <Text text={bioStack}/>
+      <IconLink label={label} href={url}/>
     </div>
   )
 }

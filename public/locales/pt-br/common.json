@@ -1,0 +1,67 @@
+{
+    "bioTitle": "Olá, sou Pedro! Desenvolvedor de Software e Jogos Indie",
+    "bioText": "Sou um estudante de Engenharia de Computação de 25 anos, especializado em React Native e Expo. No meu tempo livre, trabalho no sonho de criar jogos indie.",
+    "Biolabel": "Confira meus trabalhos no Github",
+    "bioStack": "Sou bom com React Native, Expo, TypeScript, Next.JS, Tailwind.CSS, Unity Tests, Github, Git, Flutter e Java",
+    "educationTitle": "Educação",
+   "educationArray": [
+  {
+    "id": 1,
+    "degree": "Bacharelado em Engenharia da Computação",
+    "institution": "Universidade de Sorocaba (UNISO)",
+    "duration": "2023 - Presente",
+    "country": "Brasil"
+  },
+  {
+    "id": 2,
+    "degree": "CS50: Introdução à Ciência da Computação",
+    "institution": "Universidade de Harvard",
+    "duration": "2023",
+    "country": "EUA (Remoto)"
+  }
+],
+    "experienceTitle": "Experiência",
+ "experienceArray": [
+  {
+    "id": 1,
+    "role": "Desenvolvedor Mobile",
+    "company": "Sitallcom",
+    "duration": "2024 - Presente (6 meses)",
+    "country": "Brasil",
+    "description": "Responsável por criar e manter aplicativos móveis de alta qualidade usando React Native, TypeScript e Expo. Desenvolvo novas funcionalidades e melhoro as existentes para aprimorar a experiência do usuário, atendendo mais de 20K usuários ativos."
+  },
+  {
+    "id": 2,
+    "role": "Estagiário - Desenvolvimento de Software",
+    "company": "Mark Studios LLC",
+    "duration": "2023 - 2023 (3 meses)",
+    "country": "EUA",
+    "description": "Responsável por atualizações e melhorias na plataforma SaaS da empresa, com foco em aumentar o engajamento dos funcionários. Mantive aplicativos internos usando React, JavaScript e TypeScript, garantindo a entrega de soluções eficientes e amigáveis ao usuário."
+  }
+],
+    "latestProjectsTitle": "Últimos Projetos",
+    "viewAllProjects": "Ver Todos os Projetos",
+    "allProjects": "Todos os Projetos",
+    "viewProject": "Ver projeto",
+ "projectsArray": [
+  {
+    "id": 1,
+    "title": "Moonshiner (Em Desenvolvimento)",
+    "description": "Um jogo indie de mistério desenvolvido com Flutter, onde você desvenda a identidade de um assassino na misteriosa cidade de Moonshiner enquanto protege sua família.",
+    "year": "2024 - presente",
+    "image": "/moonshiner.png",
+    "url": "https://www.youtube.com/watch?v=LuPt9pOz79U&list=PLEDcEdSKLFLXTKAB-vDl392hhdlJlbe-H"
+  },
+  {
+    "id": 2,
+    "title": "Emenu (Em Desenvolvimento)",
+    "description": "Uma plataforma de menu digital interativo para aprimorar experiências em restaurantes.",
+    "year": "2024 - presente",
+    "gradient": "from-green-400 to-yellow-600",
+    "image": "/emenu.png",
+    "url": ""
+  }
+],
+    "knowMore": "Saiba mais ↗",
+    "contact": "Contato"
+}

@@ -15,6 +15,8 @@ function IconLink({ label, href }: LinkType) {
         link = "https://www.linkedin.com/in/pedro-furquim/";
     } else if (label.includes("Github")) {
         link = "https://github.com/devpedrofurquim"
+    } else if (href) {
+        link = href;
     }
     return (
         <Link href={link} >

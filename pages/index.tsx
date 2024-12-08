@@ -6,70 +6,12 @@ import Title from "../components/core/Title";
 import HeadignWithText from "../components/Layout/HeadignWithText";
 import Button from "../components/core/Button";
 import Link from "next/link";
-
-const projects = [
-  {
-    id: 1,
-    title: "Project Name 1",
-    description: "Lorem ipsum dolor sit amet...",
-    year: "2019 - present",
-    gradient: "from-cyan-400 to-blue-600",
-  },
-  {
-    id: 2,
-    title: "Project Name 2",
-    description: "Lorem ipsum dolor sit amet...",
-    year: "2019 - present",
-    gradient: "from-green-400 to-yellow-600",
-  },
-  {
-    id: 3,
-    title: "Project Name 3",
-    description: "Lorem ipsum dolor sit amet...",
-    year: "2019 - present",
-    gradient: "from-purple-400 to-pink-600",
-  },
-];
-
-const experiences = [
-  {
-    id: 1,
-    role: "Mobile Developer",
-    company: "Sitallcom",
-    duration: "2024 - Present",
-    country: "Brazil",
-    description:
-      `Responsible for creating and maintaining high-quality mobile applications using React Native, TypeScript, and Expo. 
-      I develop new features and enhance existing ones to improve user experience, serving over 20K active users.`,
-  },
-  {
-    id: 3,
-    role: "Freelance Mobile Developer",
-    company: "Self-Employed",
-    duration: "2024 - Present",
-    country: "Brazil",
-    description:
-      "Designed and developed small-scale mobile apps for clients, focusing on user-friendly interfaces and functionality.",
-  },
-  {
-    id: 2,
-    role: "Intern - Software Development",
-    company: "Mark Studios LLC",
-    duration: "2023 - 2023 (3 months)",
-    country: "USA",
-    description: `Responsible for updates and improvements to the company’s SaaS platform, focusing on enhancing employee engagement. 
-    I maintained internal applications using React, JavaScript, and TypeScript, ensuring the delivery of efficient and user-friendly solutions. `  },
-];
-
-const bio = {
-  title: "I’m Pedro",
-  text: `I’m a 25-year-old Computer Engineering student and a passionate mobile developer specializing in React Native and Expo. 
-  When I’m not busy building apps, I’m working on my dream of creating indie games.`,
-  label: 'Find my on Github'
-}
-
+import Image from "next/image";
+import Text from "../components/core/Text";
+import { useTranslation } from "../hooks/useTranslation";
 
 const Home: NextPage = () => {
+  const t = useTranslation(); // Load translations
   return (
     <div className='min-h-screen'>
      <Head>
@@ -82,30 +24,54 @@ const Home: NextPage = () => {
       <main>
 
         {/* Hero Section */ }
-        <section className="py-12">
+        <section className="pb-12">
           <HeroPic/>
-          <HeadignWithText label={bio.label} title={bio.title} style="gradient" text={bio.text}/>
+          <HeadignWithText label={t.Biolabel} title={t.bioTitle} style="gradient" text={t.bioText} bioStack={t.bioStack}/>
         </section>
 
+        { /*Education */}
+
+        <section className="pb-12">
+        <Title title={t.educationTitle} />
+        <div className="space-y-4">
+          {t.educationArray.map((edu) => (
+            <div
+              key={edu.id}
+              className="p-4 rounded-lg"
+            >
+              <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-200">
+                {edu.degree}
+              </h3>
+              <p className="text-md text-gray-500 dark:text-gray-300">
+                {edu.institution}
+              </p>
+              <p className="text-MD text-gray-400 dark:text-gray-400">
+                {edu.duration} — {edu.country}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
         {/* Experience Section */}
-        <section>
-        <Title title="Experience" />
+        <section  className="pb-12">
+        <Title title={t.experienceTitle} />
         <div className="space-y-2">
-          {experiences.map((experience) => (
+          {t.experienceArray.map((experience) => (
             <div
               key={experience.id}
               className="flex flex-col p-4"
             >
-              <h3 className="text-lg font-semibold text-[#4A3F35] dark:text-[#F5EDE0]">
+              <h3 className="text-xl font-semibold text-[#4A3F35] dark:text-[#F5EDE0]">
                 {experience.role}
               </h3>
-              <p className="mt-2 text-sm text-gray-500 dark:text-gray-300">
+              <p className="mt-2 text-md text-gray-500 dark:text-gray-300">
                 {experience.company} — {experience.duration}
               </p>
-              <p className="mt-2 text-sm text-gray-500 dark:text-gray-300">
-                <strong>Country:</strong> {experience.country}
+              <p className="mt-2 text-md text-gray-500 dark:text-gray-300">
+                {experience.country}
               </p>
-              <p className="mt-2 text-sm text-[#4A3F35] dark:text-[#F5EDE0]">
+              <p className="mt-2 text-md text-[#4A3F35] dark:text-[#F5EDE0]">
                 {experience.description}
               </p>
             </div>
@@ -113,43 +79,60 @@ const Home: NextPage = () => {
         </div>
       </section>
 
-
-        {/* Projects Section */ }
-        <section className="py-12">
-          <Title title="Latest Projects"/>
-
-          {projects.slice(0, 2).map((project) => (
-              <div key={project.id} className="flex flex-col space-y-8 mt-4">
-                <div
-                  className={`w-full h-[250px] md:h-[180px] bg-gradient-to-r ${project.gradient} rounded-md shadow-lg`}
-                ></div>
-                <div>
-                  <span className="text-sm text-gray-400 font-light">
-                    {project.year}
-                  </span>
-                  <HeadignWithText
-                    label="try it out"
-                    title={project.title}
-                    text={project.description}
-                  />
-                </div>
+        {/* Projects Section */}
+      <section className="pb-12">
+        <Title title={t.latestProjectsTitle} />
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6" >
+          {t.projectsArray.slice(0, 2).map((project) => (
+            <div
+              key={project.id}
+              className="flex flex-col rounded-lg p-4"
+            >
+              {/* Image */}
+              <div className="relative h-40 w-full mb-4">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-md"
+                />
               </div>
-            ))}
-          { /*Project 3 - FIM */}
-           {/* Button to View All Projects */}
-            <Link href="/projects">
-              <a>
-                <Button label="View All Projects" />
-              </a>
-            </Link>
 
-        </section>
+              {/* Project Details */}
+              <span className="text-sm text-gray-500 dark:text-gray-400">
+                {project.year}
+              </span>
+              <h3 className="text-lg font-semibold text-gray-800 dark:text-white mt-2">
+                {project.title}
+              </h3>
+              <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">
+                {project.description}
+              </p>
 
-        {/* Articles Section */ }
-        <section className="py-12">
+              {/* "Know more" Link */}
+              <Link href={project.url || "#"}>
+                <a
+                  className="hover:underline text-sm mt-4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t.knowMore}
+                </a>
+              </Link>
+            </div>
+          ))}
+        </div>
 
-        </section>
-
+        {/* View All Projects Button */}
+        <div className="mt-8 flex justify-center">
+          <Link href="/projects">
+            <a className=" text-black dark:text-white border-1 border-black dark:border-white border px-6 py-2 rounded-md">
+              {t.viewAllProjects}
+            </a>
+          </Link>
+        </div>
+      </section>
       </main>
     </div>
   );
